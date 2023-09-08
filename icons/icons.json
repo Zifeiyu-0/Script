@@ -1,8 +1,6 @@
 {"name": "子非鱼自用图标库",
  "description": "收集互联网公开图标文件，版权属于原作者和商标持有人。", 
  "icons": [
- {"name": "芒果tv",
-  "url": "https://raw.githubusercontent.com/Zifeiyu-0/Script/main/icons/mgtv.png"},
-  {"name": "Quantumult_X_1",
-  "url": "https://raw.githubusercontent.com/chxm1023/Script_X/main/icon/QX/Quantumult_X_1.png"}
+ {"name": "芒果tv",  "url": "https://raw.githubusercontent.com/Zifeiyu-0/Script/main/icons/mgtv.png"},
+ {"name": "Quantumult_X_1", "url": "https://raw.githubusercontent.com/chxm1023/Script_X/main/icon/QX/Quantumult_X_1.png"}
   ]}
