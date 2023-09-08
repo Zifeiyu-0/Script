@@ -2,7 +2,7 @@
  "description": "收集互联网公开图标文件，版权属于原作者和商标持有人。", 
  "icons": [
  {"name": "薇尔莉特",
-  "url": "https://raw.githubusercontent.com/Zfeiyu-0/Script/main/icons/violet1.png"}，
+  "url": "https://raw.githubusercontent.com/Zfeiyu-0/Script/main/icons/violet1.png"},
  {"name": "芒果tv",
   "url": "https://raw.githubusercontent.com/Zfeiyu-0/Script/main/icons/mgtv.png"}
  ]}
