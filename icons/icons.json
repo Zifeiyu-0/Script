@@ -1,6 +1,9 @@
 {"name": "子非鱼自用图标库",
  "description": "子非鱼安知鱼之乐。", 
  "icons": [
+  {"name": "夏目",
+  "url": "https://raw.githubusercontent.com/Zifeiyu-0/Script/main/icons/xiamu1.png"},
+  
  {"name": "薇尔莉特",
   "url": "https://raw.githubusercontent.com/Zifeiyu-0/Script/main/icons/violet1.png"},
   
@@ -20,8 +23,7 @@
   "url": "https://raw.githubusercontent.com/Zifeiyu-0/Script/main/icons/openai.PNG"},
 
   {"name": "番茄小说",
-  "url": "https://raw.githubusercontent.com/Zifeiyu-0/Script/main/icons/fqxs.png"},
+  "url": "https://raw.githubusercontent.com/Zifeiyu-0/Script/main/icons/fqxs.png"}
 
-  {"name": "夏目",
-  "url": "https://raw.githubusercontent.com/Zifeiyu-0/Script/main/icons/xiamu1.png"}
+  
  ]}
