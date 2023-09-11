@@ -1,0 +1,61 @@
+#!name = App解锁合集
+#!desc = 合集App下载地址：
+#!openUrl = https://github.com/Zifeiyu-0/Script/tree/main
+#!author = zifeiyu
+#!homepage = https://github.com/Zifeiyu-0/Script/tree/main
+#!icon=https://raw.githubusercontent.com/Zifeiyu-0/Script/main/icons/xiamu1.png
+# 📫 邮箱：zifeiyu1004972891@gmail.com
+
+
+#============【使用说明】==============#
+# 使用声明：作者并未参与任何形式的金钱交易，仅限测试和学习，请勿转载与贩卖，下载使用后24小时请删除⚠️⚠️⚠️⚠️⚠️
+
+# 使用方法：先开脚本再打开App，自动会生效，如果无效就关了重开或者按一下恢复购买，在还不行就卸载App重新安装！最后还不行的话就是脚本失效了！
+
+# 更新日期：2023-09-11
+
+# 已解锁App下载地址：https://github.com/Zifeiyu-0/Script
+
+#=============UserScript=============#
+
+[URL Rewrite]
+# 彩云天气广告
+^https?:\/\/ad\.caiyunapp\.com - reject
+^http:\/\/adx\.sogaha\.cn\/sdk\/ad\/get - reject-200
+# 酷我音乐_AdBlock
+^https?:\/\/rich\.kuwo\.cn\/AdService\/kaiping\/.+ - reject
+# 酷我音乐_AdBlock
+^https?:\/\/.+\.kwcdn\.kuwo\.cn\/star\/upload\/.+ - reject
+# 酷我音乐_AdBlock
+^https?:\/\/mobilead\.kuwo\.cn\/EcomResourceServer\/Ad - reject
+# 酷我听书_Blockad
+https?:\/\/audiobookpay\.kuwo\.cn/a\.p\?op=get_advertright - reject-dict
+# 酷我听书_Blockad
+https?:\/\/omp-audiobookpay\.lrts\.me\/a\.p\?op=get_advertright - reject-dict
+# 酷我音乐_添加已购音乐
+^https?:\/\/musicpay\.kuwo\.cn\/music\.pay\?uid\=\d+ header http://musicpay.kuwo.cn/music.pay?uid=2
+# 云听开屏广告/浮窗
+^https?:\/\/ytmsout\.radio\.cn\/publish\/recScreen\/getLoadPage - reject-200
+# 靓机汇顶部滚屏
+^https?:\/\/ljh\.dianxiaoman\.com\/ljh\/api\/home\/getHomeList - reject
+# 墨迹天气横幅广告
+^http?:\/\/oss4bpc\.moji\.com\/.\d+\/.\d+\/.\d+\/.+\.jpg - reject
+# 牛津高阶词典-去除首页下方广告
+^https:\/\/oxadmin\.cp\.com\.cn\/api\/(hot\/index|advertise\/banner) - reject-dict
+
+
+
+[Script]
+# 网易云音乐
+# hostname = *.music.163.com
+http-response ^http[s]?:\/\/.+music.+(player\/url|playlist|entrance|\/eapi\/search\/).*$ script-path=https://raw.githubusercontent.com/Zifeiyu-0/Script/main/QX/wyymusic.js, requires-body=true, tag=网易云音乐解锁
+#************************************#
+# 酷我音乐
+# hostname = *.kuwo.cn, *.kwcdn.kuwo.cn, *.lrts.me
+http-response ^https?:\/\/.*\.(kuwo|lrts)\.(cn|me)\/(a\.p|music\.pay|(vip\/(v2|enc)\/(theme|user\/vip))|(EcomResource|(Mobile)?Ad)Serv(er|ice)).* script-path=https://raw.githubusercontent.com/Zifeiyu-0/Script/main/QX/kwyy.js, requires-body=true, tag=酷我音乐解锁
+
+
+
+#************************************#
+[MITM]
+hostname = *.music.163.com,*.kuwo.cn, *.kwcdn.kuwo.cn, *.lrts.me
