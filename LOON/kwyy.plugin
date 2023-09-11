@@ -1,0 +1,39 @@
+﻿#!name=酷我音乐会员
+
+#!desc=新版酷我若无效 请更换酷我音乐纯净版
+
+#!homepage=https://github.com/Zifeiyu-0/Script/tree/main/QX
+
+#!author=zifeiyu
+
+#!icon=https://raw.githubusercontent.com/Zifeiyu-0/Script/main/icons/kwyy.png
+
+
+
+[URL Rewrite]
+
+# 酷我音乐_AdBlock
+^https?:\/\/rich\.kuwo\.cn\/AdService\/kaiping\/.+ - reject
+# 酷我音乐_AdBlock
+^https?:\/\/.+\.kwcdn\.kuwo\.cn\/star\/upload\/.+ - reject
+# 酷我音乐_AdBlock
+^https?:\/\/mobilead\.kuwo\.cn\/EcomResourceServer\/Ad - reject
+# 酷我听书_Blockad
+https?:\/\/audiobookpay\.kuwo\.cn/a\.p\?op=get_advertright - reject-dict
+# 酷我听书_Blockad
+https?:\/\/omp-audiobookpay\.lrts\.me\/a\.p\?op=get_advertright - reject-dict
+# 酷我音乐_添加已购音乐
+^https?:\/\/musicpay\.kuwo\.cn\/music\.pay\?uid\=\d+ header http://musicpay.kuwo.cn/music.pay?uid=2
+
+[Script]
+
+# 酷我音乐
+# hostname = *.kuwo.cn, *.kwcdn.kuwo.cn, *.lrts.me
+http-response ^https?:\/\/.*\.(kuwo|lrts)\.(cn|me)\/(a\.p|music\.pay|(vip\/(v2|enc)\/(theme|user\/vip))|(EcomResource|(Mobile)?Ad)Serv(er|ice)).* script-path=https://raw.githubusercontent.com/Zifeiyu-0/Script/main/QX/kwyy.js, requires-body=true, tag=酷我音乐解锁
+
+
+
+[MITM]
+
+hostname = *.kuwo.cn, *.kwcdn.kuwo.cn, *.lrts.me
+
