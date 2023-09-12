@@ -7,7 +7,7 @@
 **************************************
 
 [rewrite_local]
-^https?:\/\/cs\.kuso\.xyz\/configs.+ url script-response-body https://github.com/Zifeiyu-0/Script/tree/main/QX/iscreen.js
+^https?:\/\/cs\.kuso\.xyz\/configs.+ url script-response-body https://raw.githubusercontent.com/Zifeiyu-0/Script/main/QX/iscreen.js
 
 [mitm]
 hostname = cs.kuso.xyz
