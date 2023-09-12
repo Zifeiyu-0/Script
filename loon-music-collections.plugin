@@ -1,4 +1,4 @@
-#!name = App解锁合集
+#!name = 音乐解锁合集
 #!desc = 合集仓库下载地址：
 #!openUrl = https://github.com/Zifeiyu-0/Script/tree/main
 #!author = zifeiyu
@@ -19,9 +19,6 @@
 #=============UserScript=============#
 
 [URL Rewrite]
-# 彩云天气广告
-^https?:\/\/ad\.caiyunapp\.com - reject
-^http:\/\/adx\.sogaha\.cn\/sdk\/ad\/get - reject-200
 # 酷我音乐_AdBlock
 ^https?:\/\/rich\.kuwo\.cn\/AdService\/kaiping\/.+ - reject
 # 酷我音乐_AdBlock
@@ -34,14 +31,6 @@ https?:\/\/audiobookpay\.kuwo\.cn/a\.p\?op=get_advertright - reject-dict
 https?:\/\/omp-audiobookpay\.lrts\.me\/a\.p\?op=get_advertright - reject-dict
 # 酷我音乐_添加已购音乐
 ^https?:\/\/musicpay\.kuwo\.cn\/music\.pay\?uid\=\d+ header http://musicpay.kuwo.cn/music.pay?uid=2
-# 云听开屏广告/浮窗
-^https?:\/\/ytmsout\.radio\.cn\/publish\/recScreen\/getLoadPage - reject-200
-# 靓机汇顶部滚屏
-^https?:\/\/ljh\.dianxiaoman\.com\/ljh\/api\/home\/getHomeList - reject
-# 墨迹天气横幅广告
-^http?:\/\/oss4bpc\.moji\.com\/.\d+\/.\d+\/.\d+\/.+\.jpg - reject
-# 牛津高阶词典-去除首页下方广告
-^https:\/\/oxadmin\.cp\.com\.cn\/api\/(hot\/index|advertise\/banner) - reject-dict
 
 
 
@@ -49,13 +38,16 @@ https?:\/\/omp-audiobookpay\.lrts\.me\/a\.p\?op=get_advertright - reject-dict
 # 网易云音乐
 # hostname = *.music.163.com
 http-response ^http[s]?:\/\/.+music.+(player\/url|playlist|entrance|\/eapi\/search\/).*$ script-path=https://raw.githubusercontent.com/Zifeiyu-0/Script/main/QX/wyymusic.js, requires-body=true, tag=网易云音乐解锁
-#************************************#
+
 # 酷我音乐
 # hostname = *.kuwo.cn, *.kwcdn.kuwo.cn, *.lrts.me
 http-response ^https?:\/\/.*\.(kuwo|lrts)\.(cn|me)\/(a\.p|music\.pay|(vip\/(v2|enc)\/(theme|user\/vip))|(EcomResource|(Mobile)?Ad)Serv(er|ice)).* script-path=https://raw.githubusercontent.com/Zifeiyu-0/Script/main/QX/kwyy.js, requires-body=true, tag=酷我音乐解锁
 
-
+#spotify
+#hostname=spclient.wg.spotify.com
+http-request ^https:\/\/spclient\.wg\.spotify\.com\/(artistview\/v1\/artist|album-entity-view\/v2\/album)\/ script-path=https://raw.githubusercontent.com/Zifeiyu-0/Script/main/QX/spotify-json.js, timeout=10, tag=spotifyJson
+http-response ^https:\/\/spclient\.wg\.spotify\.com\/(bootstrap\/v1\/bootstrap|user-customization-service\/v1\/customize)$ script-path=https://raw.githubusercontent.com/Zifeiyu-0/Script/main/QX/spotify-proto.js, requires-body=true, binary-body-mode=true, timeout=10, tag=spotifyProto
 
 #************************************#
 [MITM]
-hostname = *.music.163.com,*.kuwo.cn, *.kwcdn.kuwo.cn, *.lrts.me
+hostname = *.music.163.com,*.kuwo.cn, *.kwcdn.kuwo.cn, *.lrts.me,spclient.wg.spotify.com

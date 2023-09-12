@@ -1,0 +1,17 @@
+#!name=阿里云盘会员
+
+#!desc=阿里云盘本地会员解锁
+
+#!homepage=https://github.com/Zifeiyu-0/Script/tree/main/QX
+
+#!author=zifeiyu
+
+#!icon=https://raw.githubusercontent.com/Zifeiyu-0/Script/main/icons/alidrive.png
+
+[Script]
+
+http-response ^https?:\/\/(api|member)\.(aliyundrive|alipan)\.com\/(.+\/(users|activity|user\/get)|((business|apps)\/.+\/users|adrive\/.+\/user)) script-path=https://raw.githubusercontent.com/Zifeiyu-0/Script/main/QX/alidrive.js, requires-body=true, timeout=60 ,tag=alidrive_7
+
+[MITM]
+
+hostname = *.aliyundrive.com,*.alipan.com
