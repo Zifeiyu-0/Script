@@ -1,0 +1,13 @@
+#!name=iscreen
+#!desc=iscreen会员解锁
+#! homepage=https://github.com/Zifeiyu-0/Script/tree/main/QX
+#!author=zifeiyu
+#!icon=https://raw.githubusercontent.com/Zifeiyu-0/Script/main/icons/iscreen.png
+
+[Script]
+
+http-response ^https?:\/\/cs\.kuso\.xyz\/configs.+ script-path=https://raw.githubusercontent.com/Zifeiyu-0/Script/main/QX/iscreen.js, requires-body=true, timeout=60 ,tag=iscreen
+
+[MITM]
+
+hostname = cs.kuso.xyz
