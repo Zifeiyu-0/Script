@@ -6,7 +6,8 @@
 var headers = $request['headers'];
 delete headers["Authorization"];
 delete headers["User-Agent"];
-// headers['buvid'] = $persistentStore.read("Bilibili_buvid");
+//
+headers['buvid'] = $persistentStore.read("Bilibili_buvid");
 headers['authorization'] = $persistentStore.read("Bilibili_Authorization");
 headers['user-agent'] = $persistentStore.read("Bilibili_User-Agent");
 $done({ 'headers': headers });
