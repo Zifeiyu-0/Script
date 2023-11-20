@@ -1,0 +1,16 @@
+#!name = 网易云音乐共享会员
+#!desc = 请严格填写数据，使用时需启用此插件，禁用则共享会员失效。点击下方链接查看使用说明。
+#!openUrl = https://gitlab.com/isous/loonresource/-/blob/main/Document/NeteaseCloudMusic/README.md
+#!author = 子非鱼
+#!homepage = https://github.com/Zifeiyu-0/Script/tree/main/LOON/wyyvip.plugin
+#!icon = https://gitlab.com/isous/loonresource/-/raw/main/Icon/NeteaseCloudMusic.png
+#!date = 2023-11-20 20:23:00
+#!input = 163_Cookie
+#!input = 163_User-Agent
+#!input = 163_MConfig-Info
+
+[Script]
+http-request ^http(s)?:\/\/.+music.+(player\/url|playlist|entrance|\/eapi\/search\/).*$ script-path = https://raw.githubusercontent.com/Zifeiyu-0/Script/main/QX/Wyy/wyyvip.js, tag = iPhone端共享会员
+  
+[Mitm]
+hostname = *.music.163.com
