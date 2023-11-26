@@ -3,7 +3,7 @@
 
 [rewrite_local]
 # > 网易云解锁VIP
-^http[s]?:\/\/.+music.+(player\/url|playlist|entrance|\/eapi\/search\/).*$ url https://raw.githubusercontent.com/Zifeiyu-0/Script/main/QX/wyymusic2..js
+^http[s]?:\/\/.+music.+(player\/url|playlist|entrance|\/eapi\/search\/).*$ url script-request-header https://raw.githubusercontent.com/Zifeiyu-0/Script/main/QX/wyymusic2..js
 [mitm] 
 hostname = *.music.163.com
 
